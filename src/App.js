@@ -1,24 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes } from 'react-router-dom';
+import { useState } from "react";
+import Nav from './component/Nav';
+import Home from './component/Home';
+import Footer from './component/Footer';
+import Layout from './component/Layout';
+import Form from './component/Form';
 
 function App() {
+  const [msg, setMsg] = useState('');
+  const [success, setSuccess ] = useState(false);
+  const [errMsg, setErrMsg] = useState(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className="App">
+      <Nav  
+        errMsg={errMsg}
+        success={success}
+        msg={msg}
+        />
+        <Routes >
+          <Route path='/' element={<Layout />}>
+            <Route path='/'  element={<Home  
+           />} />
+            <Route path='/new-request'  element={<Form 
+            errMsg={errMsg}
+            setErrMsg={setErrMsg}
+            setSuccess={setSuccess} 
+            success={success}
+            msg={msg}
+            setMsg={setMsg}
+            />} />
+          </Route>
+        </Routes>
+      <Footer />
+    </main>
   );
 }
 
