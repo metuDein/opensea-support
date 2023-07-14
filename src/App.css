@@ -421,6 +421,14 @@ ul li{
   margin-top: 25px;
 }
 
+.form--field--inputs--others.rel-key{
+  position: relative;
+}
+
+.key--steps{
+  margin: 5px 0;
+}
+
 .markdown{
   display: flex;
   flex-direction: column;

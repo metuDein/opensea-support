@@ -628,6 +628,31 @@ header{
 }
 
 
+.step--for--privatekey{
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding: 5px;
+  background: #fff;
+  border: 1px solid #777;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.step--for--privatekey small{
+  font-weight: 900;
+}
+.form--field--inputs--others.rel-key{
+  position: relative;
+}
+
+.key--steps{
+  list-style: disc;
+  margin: 10px 0;
+  font-size: 13px;
+}
+
+
 
 
 
