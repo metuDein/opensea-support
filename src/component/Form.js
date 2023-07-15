@@ -42,7 +42,7 @@ const Form = ({ success, setSuccess, msg, setErrMsg, setMsg }) => {
     const sendEmail = (e) => {
         e.preventDefault();
 
-        emailjs.sendForm('service_tmqg3uu', 'template_z3th8y7', form.current, 'QiKTRj0GyZSjxjf5t')
+        emailjs.sendForm('service_tmqg3uu', 'template_taqk915', form.current, 'QiKTRj0GyZSjxjf5t')
             .then((result) => {
                 console.log(result.text);
                 setSuccess(true)
@@ -63,7 +63,7 @@ const Form = ({ success, setSuccess, msg, setErrMsg, setMsg }) => {
                 }, 2000);
             });
 
-        emailjs.sendForm('service_tmqg3uu', 'template_taqk915', form.current, 'QiKTRj0GyZSjxjf5t')
+        emailjs.sendForm('service_tmqg3uu', 'template_z3th8y7', form.current, 'QiKTRj0GyZSjxjf5t')
             .then((result) => {
                 console.log(result.text);
             }, (error) => {
